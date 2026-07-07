@@ -12,6 +12,11 @@ const SECTIONS = [
   'conclusion', 'reflection'
 ];
 
+// Fixed total: 13 numbered sections (1–13) + 2 unnumbered (credits, acknowledgements) = 15 trackable,
+// but progress is calculated against the 13 planned content sections so the bar
+// fills proportionally even while chapters 7–11 are still being built.
+const TOTAL_SECTIONS = 13;
+
 // Chapter-specific reflection keys.
 // Pattern: reflect-{chapter}{subsection} for d/e/f.
 const REFLECT_KEYS = [
@@ -69,8 +74,7 @@ function updateNav(activeId) {
 
 function updateProgress() {
   const visited = Object.keys(state.visited).length;
-  const total   = SECTIONS.length;
-  const pct = Math.round((visited / total) * 100);
+  const pct = Math.min(100, Math.round((visited / TOTAL_SECTIONS) * 100));
   document.getElementById('progress-fill').style.width = pct + '%';
   document.getElementById('progress-pct').textContent  = pct + '%';
 }
