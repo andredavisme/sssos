@@ -7,23 +7,22 @@ const STORAGE_KEY = 'sssos_v1';
 const SECTIONS = [
   'credits', 'acknowledgements', 'title', 'introduction',
   'index', 'glossary',
-  's5', 's6',
-  // s7–s11 will be added here as chapters are built
+  's5', 's6', 's7',
+  // s8–s11 will be added here as chapters are built
   'conclusion', 'reflection'
 ];
 
-// Fixed total: 13 numbered sections (1–13) + 2 unnumbered (credits, acknowledgements) = 15 trackable,
-// but progress is calculated against the 13 planned content sections so the bar
-// fills proportionally even while chapters 7–11 are still being built.
+// Fixed total: all 13 planned content sections.
+// Progress bar always calculates against the full plan.
 const TOTAL_SECTIONS = 13;
 
 // Chapter-specific reflection keys.
-// Pattern: reflect-{chapter}{subsection} for d/e/f.
 const REFLECT_KEYS = [
   'intro-reflection',
   'reflect-5d', 'reflect-5e', 'reflect-5f',
   'reflect-6d', 'reflect-6e', 'reflect-6f',
-  // reflect-7d/e/f through reflect-11d/e/f added as chapters are built
+  'reflect-7d', 'reflect-7e', 'reflect-7f',
+  // reflect-8d/e/f through reflect-11d/e/f added as chapters are built
   'reflect-final'
 ];
 
@@ -129,6 +128,9 @@ function populateReflectionDisplay() {
     'display-reflect-6d': 'reflect-6d',
     'display-reflect-6e': 'reflect-6e',
     'display-reflect-6f': 'reflect-6f',
+    'display-reflect-7d': 'reflect-7d',
+    'display-reflect-7e': 'reflect-7e',
+    'display-reflect-7f': 'reflect-7f',
   };
   Object.entries(map).forEach(([displayId, key]) => {
     const el = document.getElementById(displayId);
