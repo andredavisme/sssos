@@ -7,17 +7,18 @@ const STORAGE_KEY = 'sssos_v1';
 const SECTIONS = [
   'credits', 'acknowledgements', 'title', 'introduction',
   'index', 'glossary',
-  's5',
-  // chapters 6-11 will be added here as they are built
+  's5', 's6',
+  // s7–s11 will be added here as chapters are built
   'conclusion', 'reflection'
 ];
 
 // Chapter-specific reflection keys.
-// Pattern: reflect-{chapter}{subsection} for 5d/5e/5f etc.
-// As chapters 6-11 are added, append keys: reflect-6d, reflect-6e, reflect-6f, etc.
+// Pattern: reflect-{chapter}{subsection} for d/e/f.
 const REFLECT_KEYS = [
   'intro-reflection',
   'reflect-5d', 'reflect-5e', 'reflect-5f',
+  'reflect-6d', 'reflect-6e', 'reflect-6f',
+  // reflect-7d/e/f through reflect-11d/e/f added as chapters are built
   'reflect-final'
 ];
 
@@ -118,9 +119,12 @@ function initReflections() {
 function populateReflectionDisplay() {
   const map = {
     'display-intro-reflection': 'intro-reflection',
-    'display-reflect-5d':        'reflect-5d',
-    'display-reflect-5e':        'reflect-5e',
-    'display-reflect-5f':        'reflect-5f',
+    'display-reflect-5d': 'reflect-5d',
+    'display-reflect-5e': 'reflect-5e',
+    'display-reflect-5f': 'reflect-5f',
+    'display-reflect-6d': 'reflect-6d',
+    'display-reflect-6e': 'reflect-6e',
+    'display-reflect-6f': 'reflect-6f',
   };
   Object.entries(map).forEach(([displayId, key]) => {
     const el = document.getElementById(displayId);
