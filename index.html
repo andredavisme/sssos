@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SSSOS — Systems for Systematic Systems</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- SIDEBAR NAV -->
+<nav id="sidebar">
+  <div id="sidebar-header">
+    <span class="logo-mark">⬡</span>
+    <span class="logo-text">SSSOS</span>
+  </div>
+  <ul id="nav-list">
+    <li data-section="credits"      class="nav-item">* Credits</li>
+    <li data-section="acknowledgements" class="nav-item">* Acknowledgements</li>
+    <li data-section="title"        class="nav-item">1 · Title</li>
+    <li data-section="introduction" class="nav-item">2 · Introduction</li>
+    <li data-section="index"        class="nav-item">3 · Content Index</li>
+    <li data-section="glossary"     class="nav-item">4 · Glossary</li>
+    <li data-section="content"      class="nav-item">5 · Subject Content</li>
+    <li data-section="conclusion"   class="nav-item">6 · Conclusion</li>
+    <li data-section="reflection"   class="nav-item">7 · Reflections</li>
+  </ul>
+  <div id="progress-bar-wrap">
+    <div id="progress-label">Progress</div>
+    <div id="progress-track"><div id="progress-fill"></div></div>
+    <div id="progress-pct">0%</div>
+  </div>
+</nav>
+
+<!-- HAMBURGER -->
+<button id="hamburger" aria-label="Toggle navigation">&#9776;</button>
+
+<!-- MAIN -->
+<main id="main">
+
+  <!-- ★ CREDITS -->
+  <section id="section-credits" class="section hidden">
+    <div class="section-inner">
+      <p class="overline">Production Credits</p>
+      <h1>The Business of Life</h1>
+      <p class="subtitle">Volume I</p>
+      <div class="card">
+        <p><strong>Subject Title</strong><br>Systems for Systematic Systems — An Observation of Systems</p>
+        <p><strong>Series</strong><br>The Business of Life</p>
+        <p><strong>Platform</strong><br>SSSOS Interactive Education · GitHub Pages</p>
+        <p><strong>Developed by</strong><br>Data Solutions for Me</p>
+      </div>
+      <button class="next-btn" data-next="acknowledgements">Continue →</button>
+    </div>
+  </section>
+
+  <!-- ★ ACKNOWLEDGEMENTS -->
+  <section id="section-acknowledgements" class="section hidden">
+    <div class="section-inner">
+      <p class="overline">Acknowledgements</p>
+      <h1>With Gratitude</h1>
+      <div class="card">
+        <p>This subject is dedicated to every observer who has ever paused long enough to ask <em>why</em> a system produces what it produces — and had the courage to expect better.</p>
+        <p>To the discussions that sharpened perspectives, the reflections that revealed bias, and the curiosity that kept this work honest.</p>
+      </div>
+      <button class="next-btn" data-next="title">Continue →</button>
+    </div>
+  </section>
+
+  <!-- ★ TITLE -->
+  <section id="section-title" class="section hidden">
+    <div class="section-inner center">
+      <p class="overline">Systems for Systematic Systems</p>
+      <h1 class="hero-title">An Observation<br>of Systems</h1>
+      <p class="volume-tag">Volume: The Business of Life</p>
+      <div class="divider"></div>
+      <p class="tagline">Every known entity contains a system.<br>This is how we learn to see them.</p>
+      <button class="next-btn" data-next="introduction">Begin →</button>
+    </div>
+  </section>
+
+  <!-- ★ INTRODUCTION -->
+  <section id="section-introduction" class="section hidden">
+    <div class="section-inner">
+      <p class="overline">Section 2</p>
+      <h1>Introduction</h1>
+
+      <div class="card axiom-card">
+        <h2>Core Axioms</h2>
+        <ul class="axiom-list">
+          <li>Systems exist in every known entity.</li>
+          <li>Systems are as complex or simple as is <em>necessary</em>.</li>
+          <li><strong>Complex</strong> — more granular components than the standard.</li>
+          <li><strong>Simple</strong> — fewer granular components than the standard.</li>
+          <li><strong>Standard</strong> — the mathematical average of subjects known to the observer.</li>
+          <li><strong>Necessity</strong> — defined by the observer.</li>
+          <li>Entities are considered <em>physical</em> and <em>metaphysical</em>.</li>
+          <li><strong>Physical</strong> — material objects of any size comprised of atoms.</li>
+          <li><strong>Metaphysical</strong> — concepts and representations of those concepts expressed as communicated ideas.</li>
+        </ul>
+      </div>
+
+      <div class="two-col">
+        <div class="card">
+          <h3>Physical Examples</h3>
+          <ul>
+            <li>Human Body</li>
+            <li>Dog Body</li>
+            <li>Gorilla Body</li>
+            <li>Dolphin Body</li>
+            <li>Toaster Oven</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Metaphysical Examples</h3>
+          <ul>
+            <li>Family Tree</li>
+            <li>Course Syllabus</li>
+            <li>Business Procedure</li>
+            <li>Emergency Escape Plan</li>
+            <li>Government Infrastructure</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card highlight-card">
+        <h2>Before You Proceed</h2>
+        <p>Before reading further, reflect on these three questions. Use the space below to record your answers — you will return to them at the end.</p>
+        <ol class="reflect-questions">
+          <li>What entity has a system that you want to optimize?</li>
+          <li>What are the priority entities expected to be produced by that system?</li>
+          <li>Are those entities consistently produced to your expectation?</li>
+        </ol>
+        <textarea id="intro-reflection" class="reflect-area" rows="5" placeholder="Write your initial reflections here…"></textarea>
+        <button class="save-btn" data-key="intro-reflection">Save Reflection</button>
+        <span class="save-status" id="status-intro-reflection"></span>
+      </div>
+
+      <button class="next-btn" data-next="index">Continue →</button>
+    </div>
+  </section>
+
+  <!-- ★ INDEX -->
+  <section id="section-index" class="section hidden">
+    <div class="section-inner">
+      <p class="overline">Section 3</p>
+      <h1>Subject Content Index</h1>
+      <div class="card">
+        <table class="index-table">
+          <thead><tr><th>#</th><th>Section</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>*</td><td>Production Credits</td><td class="status-cell" data-track="credits"></td></tr>
+            <tr><td>*</td><td>Acknowledgements</td><td class="status-cell" data-track="acknowledgements"></td></tr>
+            <tr><td>1</td><td>Title Presentation</td><td class="status-cell" data-track="title"></td></tr>
+            <tr><td>2</td><td>Introduction Presentation</td><td class="status-cell" data-track="introduction"></td></tr>
+            <tr><td>3</td><td>Subject Content Index</td><td class="status-cell" data-track="index"></td></tr>
+            <tr><td>4</td><td>Subject Glossary</td><td class="status-cell" data-track="glossary"></td></tr>
+            <tr><td>5</td><td>Subject Content</td><td class="status-cell" data-track="content"></td></tr>
+            <tr><td>6</td><td>Subject Conclusion</td><td class="status-cell" data-track="conclusion"></td></tr>
+            <tr><td>7</td><td>Consolidation of Personal Reflections</td><td class="status-cell" data-track="reflection"></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <button class="next-btn" data-next="glossary">Continue →</button>
+    </div>
+  </section>
+
+  <!-- ★ GLOSSARY -->
+  <section id="section-glossary" class="section hidden">
+    <div class="section-inner">
+      <p class="overline">Section 4</p>
+      <h1>Subject Glossary</h1>
+      <div class="glossary-grid">
+        <div class="gloss-entry"><dt>System</dt><dd>The organized set of components within any known entity that operates to produce results.</dd></div>
+        <div class="gloss-entry"><dt>Entity</dt><dd>Any physical or metaphysical subject that contains or constitutes a system.</dd></div>
+        <div class="gloss-entry"><dt>Observer</dt><dd>The individual who defines necessity, establishes standards, and evaluates a system's outputs.</dd></div>
+        <div class="gloss-entry"><dt>Standard</dt><dd>The mathematical average of granular components across all subjects known to the observer.</dd></div>
+        <div class="gloss-entry"><dt>Necessity</dt><dd>The requirement for a system to exist or operate, defined entirely by the observer.</dd></div>
+        <div class="gloss-entry"><dt>Complex</dt><dd>A system whose granular component count exceeds the observer's standard.</dd></div>
+        <div class="gloss-entry"><dt>Simple</dt><dd>A system whose granular component count falls below the observer's standard.</dd></div>
+        <div class="gloss-entry"><dt>Granular Component</dt><dd>An individual sub-unit within a system; the discrete parts that together form the whole.</dd></div>
+        <div class="gloss-entry"><dt>Priority Entity</dt><dd>The intended result or output a system is expected to consistently produce.</dd></div>
+        <div class="gloss-entry"><dt>Physical System</dt><dd>A system composed of material objects of any size that are comprised of atoms.</dd></div>
+        <div class="gloss-entry"><dt>Metaphysical System</dt><dd>A system composed of concepts and representations of those concepts expressed as communicated ideas.</dd></div>
+        <div class="gloss-entry"><dt>Undesired Bias</dt><dd>Any element in a system's construction that skews output away from the observer's defined necessity.</dd></div>
+        <div class="gloss-entry"><dt>Optimization</dt><dd>The process of refining a system to consistently produce its priority entities and resist undesired bias.</dd></div>
+        <div class="gloss-entry"><dt>Personal Experience Reflection</dt><dd>A recorded, written observation of one's history with a system, used to refine perspective and identify bias over time.</dd></div>
+      </div>
+      <button class="next-btn" data-next="content">Continue →</button>
+    </div>
+  </section>
+
+  <!-- ★ CONTENT -->
+  <section id="section-content" class="section hidden">
+    <div class="section-inner">
+      <p class="overline">Section 5</p>
+      <h1>Subject Content</h1>
+
+      <!-- 5a -->
+      <div class="content-block" id="block-5a">
+        <h2>5a · Granular Subject Matter</h2>
+        <p>Every system can be decomposed into its granular components — the discrete sub-units that, together, form the whole. The count and arrangement of these components determine whether a system is observed as simple or complex relative to the observer's personal standard.</p>
+        <p>The observer's standard is not fixed. It is the mathematical average of all subjects the observer currently knows. As knowledge grows, the standard shifts — and so does the threshold between simple and complex.</p>
+        <div class="example-block">
+          <strong>Example Calculation</strong>
+          <p>If an observer knows five systems with the following estimated component counts:</p>
+          <ul>
+            <li>Human Body: 1,000</li>
+            <li>Toaster Oven: 50</li>
+            <li>Family Tree: 20</li>
+            <li>Course Syllabus: 15</li>
+            <li>Business Procedure: 30</li>
+          </ul>
+          <p>Standard = (1000 + 50 + 20 + 15 + 30) ÷ 5 = <strong>223</strong></p>
+          <p>Any new system with more than 223 components is <em>complex</em>; fewer than 223 is <em>simple</em>.</p>
+        </div>
+      </div>
+
+      <!-- 5b -->
+      <div class="content-block" id="block-5b">
+        <h2>5b · Practical Application</h2>
+        <p>Practical application means identifying how a system's granular components function in a real-world setting. The observer looks at the system as it actually operates — not as it is theoretically designed — and evaluates whether each component contributes to the production of priority entities.</p>
+        <div class="two-col">
+          <div class="card">
+            <h3>Physical: Toaster Oven</h3>
+            <p>Components include the heating element, timer, thermostat, and exterior casing. In practice, the priority entity is <em>evenly toasted food</em>. If heat distribution is uneven, the system has a bias against its own necessity.</p>
+          </div>
+          <div class="card">
+            <h3>Metaphysical: Business Procedure</h3>
+            <p>Components include approval steps, signatories, and timelines. In practice, the priority entity is <em>a consistently completed task</em>. If one department requires five approvals and another one, the procedure has an undesired bias.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5c -->
+      <div class="content-block" id="block-5c">
+        <h2>5c · Analogous Application</h2>
+        <p>Analogous application compares a system's components to those of similar entities. This process expands the observer's standard — each new analogy adds to the mathematical average — and reveals whether the system under observation deviates meaningfully from peers in its category.</p>
+        <div class="card">
+          <h3>Analogy: Emergency Escape Plan ↔ Course Syllabus</h3>
+          <p>Both are metaphysical systems. Both have sequential steps, defined roles, and an intended outcome (safety vs. learning). Comparing their granular components — routes and muster points vs. modules and assessments — clarifies which design choices are category-standard and which are unique to each system's necessity.</p>
+        </div>
+      </div>
+
+      <!-- 5d -->
+      <div class="content-block" id="block-5d">
+        <h2>5d · Personal Application</h2>
+        <p>Personal application asks the observer to identify how they personally interface with a system's components. This is the bridge between abstract observation and lived experience. The observer does not simply describe the system — they locate themselves within it.</p>
+        <textarea class="reflect-area" id="reflect-5d" rows="4" placeholder="Describe a system you interact with daily. List two or three of its granular components. Which component most directly affects the priority entity you care about?"></textarea>
+        <button class="save-btn" data-key="reflect-5d">Save</button>
+        <span class="save-status" id="status-reflect-5d"></span>
+      </div>
+
+      <!-- 5e -->
+      <div class="content-block" id="block-5e">
+        <h2>5e · Personal Experience Reflection</h2>
+        <p>This stage asks the observer to look backward — to draw on their unique history with a specific system and record what the intended output was in that context. By writing these reflections down, observers create a permanent reference that evolves alongside their complexity standard.</p>
+        <textarea class="reflect-area" id="reflect-5e" rows="5" placeholder="Describe a time a system you relied on failed to produce its priority entity. What was the system? What was missing?"></textarea>
+        <button class="save-btn" data-key="reflect-5e">Save</button>
+        <span class="save-status" id="status-reflect-5e"></span>
+      </div>
+
+      <!-- 5f -->
+      <div class="content-block" id="block-5f">
+        <h2>5f · Current Events Relationship</h2>
+        <p>No system exists in isolation. Every system is influenced by and interacts with the broader world. This stage asks the observer to identify a current event — something happening now — and map it to a system from this subject. How does that event affect the system's granular components, its standard, or its priority entities?</p>
+        <textarea class="reflect-area" id="reflect-5f" rows="4" placeholder="Choose a current event. What system does it most affect? How has it changed the system's complexity, priority entities, or the observer's standard?"></textarea>
+        <button class="save-btn" data-key="reflect-5f">Save</button>
+        <span class="save-status" id="status-reflect-5f"></span>
+      </div>
+
+      <button class="next-btn" data-next="conclusion">Continue →</button>
+    </div>
+  </section>
+
+  <!-- ★ CONCLUSION -->
+  <section id="section-conclusion" class="section hidden">
+    <div class="section-inner">
+      <p class="overline">Section 6</p>
+      <h1>Subject Conclusion</h1>
+      <div class="card">
+        <p>Every known entity contains a system. Systems are as complex or simple as is necessary — and necessity is defined by you, the observer.</p>
+        <p>Through this subject you have encountered the definitions, examples, and reflective tools to begin observing the systems you inhabit and the systems you wish to optimize. The standard by which you measure complexity is your own — and it will grow as your knowledge grows.</p>
+        <p>What you protect against is <em>undesired bias</em>: the subtle distortions in a system's construction that prevent it from consistently producing its priority entities. The antidote is perspective — developed through discussion, reflection, and honest observation.</p>
+        <p>You are the observer. You define the necessity. You set the standard. You determine what the system is for.</p>
+      </div>
+      <button class="next-btn" data-next="reflection">Continue to Final Reflection →</button>
+    </div>
+  </section>
+
+  <!-- ★ REFLECTION CONSOLIDATION -->
+  <section id="section-reflection" class="section hidden">
+    <div class="section-inner">
+      <p class="overline">Section 7</p>
+      <h1>Consolidation of Personal Reflections</h1>
+      <p class="section-intro">Below are all of your saved reflections from this subject. Review them together. Have your answers to the opening questions changed?</p>
+
+      <div class="card">
+        <h3>Opening Reflection (Introduction)</h3>
+        <div class="saved-display" id="display-intro-reflection"><em>No entry saved.</em></div>
+      </div>
+      <div class="card">
+        <h3>Personal Application (5d)</h3>
+        <div class="saved-display" id="display-reflect-5d"><em>No entry saved.</em></div>
+      </div>
+      <div class="card">
+        <h3>Personal Experience Reflection (5e)</h3>
+        <div class="saved-display" id="display-reflect-5e"><em>No entry saved.</em></div>
+      </div>
+      <div class="card">
+        <h3>Current Events Relationship (5f)</h3>
+        <div class="saved-display" id="display-reflect-5f"><em>No entry saved.</em></div>
+      </div>
+
+      <div class="card highlight-card">
+        <h3>Final Synthesis</h3>
+        <p>Revisit your three opening questions. Write your updated answers now.</p>
+        <ol class="reflect-questions">
+          <li>What entity has a system that you want to optimize?</li>
+          <li>What are the priority entities expected to be produced by that system?</li>
+          <li>Are those entities consistently produced to your expectation?</li>
+        </ol>
+        <textarea class="reflect-area" id="reflect-final" rows="6" placeholder="Your final synthesis…"></textarea>
+        <button class="save-btn" data-key="reflect-final">Save Final Reflection</button>
+        <span class="save-status" id="status-reflect-final"></span>
+      </div>
+
+      <div class="completion-banner" id="completion-banner">
+        <span class="complete-icon">⬡</span>
+        <p><strong>Subject Complete.</strong> You have finished Systems for Systematic Systems — An Observation of Systems.</p>
+        <p class="small">Your reflections are saved locally in this browser. Returning to this page will restore your progress automatically.</p>
+        <button class="next-btn" onclick="goToSection('credits')">↑ Return to Start</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
