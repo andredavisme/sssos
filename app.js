@@ -6,9 +6,20 @@
 const STORAGE_KEY = 'sssos_v1';
 const SECTIONS = [
   'credits', 'acknowledgements', 'title', 'introduction',
-  'index', 'glossary', 'content', 'conclusion', 'reflection'
+  'index', 'glossary',
+  's5',
+  // chapters 6-11 will be added here as they are built
+  'conclusion', 'reflection'
 ];
-const REFLECT_KEYS = ['intro-reflection', 'reflect-5d', 'reflect-5e', 'reflect-5f', 'reflect-final'];
+
+// Chapter-specific reflection keys.
+// Pattern: reflect-{chapter}{subsection} for 5d/5e/5f etc.
+// As chapters 6-11 are added, append keys: reflect-6d, reflect-6e, reflect-6f, etc.
+const REFLECT_KEYS = [
+  'intro-reflection',
+  'reflect-5d', 'reflect-5e', 'reflect-5f',
+  'reflect-final'
+];
 
 // ── State ──────────────────────────────────────────────────
 function loadState() {
@@ -20,26 +31,22 @@ function saveState(state) {
 }
 
 let state = loadState();
-// Ensure defaults
 if (!state.visited)     state.visited = {};
 if (!state.reflections) state.reflections = {};
 if (!state.current)     state.current = 'credits';
 
 // ── Navigation ─────────────────────────────────────────────
 function goToSection(id) {
-  // Hide all
   document.querySelectorAll('.section').forEach(s => {
     s.classList.remove('active');
     s.classList.add('hidden');
   });
-  // Show target
   const el = document.getElementById('section-' + id);
   if (!el) return;
   el.classList.remove('hidden');
   el.classList.add('active');
   window.scrollTo({ top: 0, behavior: 'smooth' });
 
-  // Mark visited
   state.visited[id] = true;
   state.current = id;
   saveState(state);
@@ -48,7 +55,6 @@ function goToSection(id) {
   updateProgress();
   updateStatusCells();
 
-  // Populate reflections display if on reflection page
   if (id === 'reflection') populateReflectionDisplay();
 }
 
@@ -86,16 +92,13 @@ function initReflections() {
   REFLECT_KEYS.forEach(key => {
     const ta = document.getElementById(key);
     if (!ta) return;
-    // Restore saved value
     if (state.reflections[key]) ta.value = state.reflections[key];
-    // Auto-save on input
     ta.addEventListener('input', () => {
       state.reflections[key] = ta.value;
       saveState(state);
     });
   });
 
-  // Save buttons
   document.querySelectorAll('.save-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const key    = btn.dataset.key;
@@ -133,7 +136,6 @@ function initNav() {
   document.querySelectorAll('.nav-item').forEach(item => {
     item.addEventListener('click', () => {
       goToSection(item.dataset.section);
-      // Close sidebar on mobile
       if (window.innerWidth <= 700) sidebar.classList.remove('open');
     });
   });
