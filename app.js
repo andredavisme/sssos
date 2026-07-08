@@ -7,8 +7,7 @@ const STORAGE_KEY = 'sssos_v1';
 const SECTIONS = [
   'credits', 'acknowledgements', 'title', 'introduction',
   'index', 'glossary',
-  's5', 's6', 's7',
-  // s8–s11 will be added here as chapters are built
+  's5', 's6', 's7', 's8', 's9', 's10', 's11',
   'conclusion', 'reflection'
 ];
 
@@ -22,7 +21,10 @@ const REFLECT_KEYS = [
   'reflect-5d', 'reflect-5e', 'reflect-5f',
   'reflect-6d', 'reflect-6e', 'reflect-6f',
   'reflect-7d', 'reflect-7e', 'reflect-7f',
-  // reflect-8d/e/f through reflect-11d/e/f added as chapters are built
+  'reflect-8d', 'reflect-8e', 'reflect-8f',
+  'reflect-9d', 'reflect-9e', 'reflect-9f',
+  'reflect-10d', 'reflect-10e', 'reflect-10f',
+  'reflect-11d', 'reflect-11e', 'reflect-11f',
   'reflect-final'
 ];
 
@@ -131,6 +133,18 @@ function populateReflectionDisplay() {
     'display-reflect-7d': 'reflect-7d',
     'display-reflect-7e': 'reflect-7e',
     'display-reflect-7f': 'reflect-7f',
+    'display-reflect-8d': 'reflect-8d',
+    'display-reflect-8e': 'reflect-8e',
+    'display-reflect-8f': 'reflect-8f',
+    'display-reflect-9d': 'reflect-9d',
+    'display-reflect-9e': 'reflect-9e',
+    'display-reflect-9f': 'reflect-9f',
+    'display-reflect-10d': 'reflect-10d',
+    'display-reflect-10e': 'reflect-10e',
+    'display-reflect-10f': 'reflect-10f',
+    'display-reflect-11d': 'reflect-11d',
+    'display-reflect-11e': 'reflect-11e',
+    'display-reflect-11f': 'reflect-11f',
   };
   Object.entries(map).forEach(([displayId, key]) => {
     const el = document.getElementById(displayId);
